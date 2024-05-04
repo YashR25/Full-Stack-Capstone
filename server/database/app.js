@@ -91,7 +91,7 @@ app.get('/fetchDealer/:id', async (req, res) => {
 //Write your code here
     const id = req.params.id;
     try {
-        const dealer = await Dealerships.findOne({id})    
+        const dealer = await Dealerships.find({id})    
         if(!dealer){
             return res.status(404).json({error: 'Dealer not found!'})
         }
